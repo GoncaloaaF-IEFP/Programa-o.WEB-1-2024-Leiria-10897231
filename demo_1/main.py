@@ -7,8 +7,6 @@ varias
 linha
 
 """
-from pyasn1_modules.rfc2985 import smime
-
 # var
 
 
@@ -148,7 +146,33 @@ while sum > 0:
 
     sum -= 1
 
+print("-------- input demo ------")
+# input
 
+idade = input("idade: ")
+print(idade)
+
+print("""
+Faça um Programa que peça um número e então mostre a mensagem 
+O número informado foi [número].
+""")
+
+
+num = input("Digite um número: ")
+print(f"O número informado foi {num}")
+
+
+print("""
+Faça um Programa que peça dois números e imprima a soma.
+""")
+
+num1 = float(input("num 1: "))
+num2 = float(input("num 2: "))
+
+
+soma = num1 + num2
+
+print(f"a soma de {num1} com {num2} é {soma}")
 
 # arr (listas)
 
