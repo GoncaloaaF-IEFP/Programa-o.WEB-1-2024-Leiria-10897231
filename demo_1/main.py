@@ -7,7 +7,7 @@ varias
 linha
 
 """
-
+from pyasn1_modules.rfc2985 import smime
 
 # var
 
@@ -88,7 +88,6 @@ if v1 == 10 and not v2 == 20:
 else:
     print("nao ok")
 
-    # while
 
 
     # match case
@@ -96,7 +95,60 @@ else:
 
 # loops
     # for
-    # while
+
+print("-------- for ------")
+nome = "O meu nome"
+for l in nome:
+   if l == "e":
+       print("it Works")
+   else:
+        print(l)
+
+
+ # range(n) <- 0 ate  n-1
+ # range(m, n) <- m ate  n-1
+ # range(m, n, s) <- m ate  n-1 com step de s
+
+print("------for v2 -------")
+for n in range(5, 100, 5):
+    print(n)
+
+
+print("------for v3-------")
+for n in range(5, 100, 5):
+
+
+    if n % 10 == 0:
+        print("n % 10 == 0")
+        continue
+
+    if n == 25:
+        break
+
+    print(n)
+
+
+print("-------- while ------")
+
+# while
+
+"""
+    --  =  -= 1
+    ++  =  += 1
+    
+"""
+
+sum = 100
+while sum > 0:
+
+    if sum % 2 == 0:
+         print(sum)
+    if sum % 5 == 0:
+         break
+
+    sum -= 1
+
+
 
 # arr (listas)
 
@@ -105,3 +157,5 @@ else:
 
 # funcs
 
+
+# classes ??
