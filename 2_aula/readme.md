@@ -2,4 +2,7 @@
 
 * Condições
   * match case
-* Funções 
+* Funções
+* Listas
+* Dict
+* Tuplo
