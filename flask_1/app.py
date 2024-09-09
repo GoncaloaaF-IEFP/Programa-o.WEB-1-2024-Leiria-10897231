@@ -39,3 +39,7 @@ def template():
     return render_template("pag1.html")
 
 
+
+@app.route('/template2')
+def template2():
+    return render_template("pag2.html")
