@@ -2,6 +2,21 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
+
+class Aluno:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+
+alunos = [
+    Aluno("Ana", 20),
+    Aluno("Bruno", 22),
+    Aluno("Carlos", 19),
+    Aluno("Diana", 21)
+]
+
+
 @app.route('/homepage')
 def index():
     return 'Hello World!'
@@ -79,6 +94,38 @@ def page_not_found(e):
     return render_template("not_found.html"), 404
 
 
+@app.route("/alunoInfo/")
+def aluno_info():
+    aluno = Aluno("Gonçalo", 18)
+    print(f"nome:{aluno.nome}, idade:{aluno.idade}")
 
+    return render_template("aluno_info.html",
+                           al = aluno)
+
+
+@app.route("/lista_alunos")
+def lista_alunos():
+    return render_template("list_alunos.html",
+                           lista = alunos)
+
+
+
+
+@app.route("/add_aluno")
+def add_aluno_view():
+    return render_template("add_aluno.html")
+
+
+
+@app.route("/add", methods=['POST'])
+def add_aluno():
+
+    nome = request.form['nome']
+    idade = request.form['idade']
+
+    al = Aluno(nome, idade)
+    alunos.append(al)
+
+    return redirect("/lista_alunos")
 
 

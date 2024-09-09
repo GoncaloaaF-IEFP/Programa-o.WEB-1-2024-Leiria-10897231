@@ -1,0 +1,18 @@
+{% extends "template_base.html"  %}
+
+
+{% block titulo %}
+  Lista de alunos
+{% endblock %}
+
+
+{% block conteudo %}
+
+  <ul>
+    {% for al in lista %}
+         <li> nome: {{ al.nome }} | idade: {{ al.idade }}</li>
+    {% endfor %}
+  </ul>
+
+
+{% endblock %}
