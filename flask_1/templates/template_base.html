@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block titulo %} {% endblock %} </title>
+        <link rel="stylesheet" href="{{ url_for("static", filename="estilos.css") }}">
     </head>
     
-    <body style="background-color: palegreen">
+    <body>
     
         <nav>
             <a href="{{ url_for("index") }}"> homepage </a>  |

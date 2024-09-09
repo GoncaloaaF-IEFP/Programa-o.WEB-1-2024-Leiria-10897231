@@ -117,7 +117,8 @@ def add_aluno_view():
 
 
 
-@app.route("/add", methods=['POST'])
+#@app.route("/add", methods=['POST'])
+@app.post("/add")
 def add_aluno():
 
     nome = request.form['nome']
