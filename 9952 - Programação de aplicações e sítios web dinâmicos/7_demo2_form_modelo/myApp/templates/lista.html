@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    <h1> Lista de Alunos</h1>
+
+    <ul>
+        {% for al in lista %}
+            <li> {{ al.name }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

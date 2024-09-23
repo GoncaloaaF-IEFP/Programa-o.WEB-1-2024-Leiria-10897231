@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    <h1> Add aluno </h1>
+
+    <form method="post" action="{% url "addAluno" %}">
+
+        {% csrf_token %}
+
+        <label for="nome">nome</label>
+        <input type="text" name="nome" id="nome" placeholder="nome: ">
+        <br>
+        <label for="idade">idade</label>
+        <input type="text" name="idade" id="idade" placeholder="idade: ">
+        <br>
+        <label for="turma">turma</label>
+        <input type="text" name="turma" id="turma" placeholder="turma: ">
+        <br>
+
+        <input type="submit" value="Registar">
+
+
+
+    </form>
+
+
+{% endblock %}

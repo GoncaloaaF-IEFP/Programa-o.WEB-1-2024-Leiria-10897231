@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    <h1> Add aluno V2 </h1>
+
+    <form method="post" action="{% url "addAluno" %}">
+        {% csrf_token %}
+
+        {{ form  }}
+
+         <input type="submit" value="Registar" class="btn btn-primary mb-3">
+    </form>
+
+
+{% endblock %}
